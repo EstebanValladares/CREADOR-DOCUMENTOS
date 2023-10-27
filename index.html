@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@500&family=Red+Hat+Display:wght@500&display=swap" rel="stylesheet">
+    <title>DOCUMENTOS WORLD</title>
+</head>
+<body>
+    <h1>CREACION DE DOCUMENTOS</h1>
+    <div id="container-error"></div>
+    <section>
+        <article>
+            <form enctype="multipart/form-data" id="formulario">
+                <label for="">NOMBRE:</label>
+                <br>
+                <input type="text" id="nombre">
+                <br>
+                <label for="">APELLIDO:</label>
+                <br>
+                <input type="text" id="apellido">
+                <br>
+                <label for="">CORREO:</label>
+                <br>
+                <input type="email" id="correo">
+                <br>
+                <label for="">TELEFONO:</label>
+                <br>
+                <input type="tel" id="telefono">
+                <br>
+                <label for="">DIRECCION:</label>
+                <br>
+                <input type="text" maxlength="30" id="direccion">
+                <br>
+                <label for="">LENGUAJE DE PROGRAMACION:</label>
+                <br>
+                <input type="radio">C++
+                <input type="radio">JavaScript
+                <input type="radio">Python
+                <input type="radio">Java
+                <input type="radio">Ruby
+                <br>
+                <label for="">FOTO DE PERFIL:</label>
+                <br>
+                <input type="file" name="imagen">
+                <br>
+                <label for="">DESCRIBE TU TRABAJO:</label>
+                <br>
+                <input type="text" maxlength="80" id="descripcion">
+                <br>
+                <button class="envio" type="submit">CONVERTIR</button>
+            </form>
+        </article>
+        <article class="document">
+
+        </article>
+    </section>
+    <script src="app.js"></script>
+</body>
+</html>
