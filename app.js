@@ -1,5 +1,6 @@
 
 const verFormulario = document.querySelector('#formulario');
+const botonENvio = document.querySelector('#envioDatos');
 verFormulario.addEventListener('submit',verificador);
 
 function verificador(e){
@@ -13,6 +14,40 @@ function verificador(e){
 
     if(nombreForm=='' || apellidoForm=='' || correoForm=='' || telefonoForm=='' || direccionForm=='' || descripcionForm==''){
         alertaMensaje('RELLENAR TODOS LOS ESPACIOS!');
+    }else{
+        botonENvio.addEventListener('click',MostrarDatos);
+    function MostrarDatos(){
+        const nombreDocu = document.getElementById('sectionNombre');
+        const apelliDocu = document.getElementById('sectionApellido');
+        const correoDocu = document.getElementById('sectionCorreo');
+        const telDocu = document.getElementById('sectionTelefono');
+        const direcDocu = document.getElementById('sectionDireccion');
+        const descDocu = document.getElementById('sectionDescripcion');
+        const imagenU = document.getElementById('imagenUsuario');
+        let nombres = nombreForm;
+        let apellidos = apellidoForm;
+        let correos = correoForm;
+        let telefonos = telefonoForm;
+        let direcciones = direccionForm;
+        let descripciones = descripcionForm;
+        nombreDocu.textContent = nombres;
+        apelliDocu.textContent = apellidos;
+        correoDocu.textContent = correos;
+        telDocu.textContent = telefonos;
+        direcDocu.textContent = direcciones;
+        descDocu.textContent = descripciones;
+            if (imagenU.files.length > 0) {
+                const archivo = imagenU.files[0];
+                const imagen = document.createElement("img");
+                imagen.src = URL.createObjectURL(archivo);
+                imagen.style.borderRadius = '100%';
+                const imagenContainer = document.getElementById("container-img");
+                imagenContainer.innerHTML = "";
+                imagenContainer.appendChild(imagen);
+            } else {
+                alert("Por favor, seleccione una imagen antes de hacer clic en Mostrar Imagen.");
+            }
+        }
     }
 }
 function alertaMensaje(mensaje){
@@ -27,7 +62,7 @@ function alertaMensaje(mensaje){
         contenedorAlert.appendChild(alert);
         setTimeout(() => {
             alert.remove();
-        }, 3000);
+        }, 4000);
     }
 
 }

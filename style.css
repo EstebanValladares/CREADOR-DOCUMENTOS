@@ -20,12 +20,14 @@ body{
                     border: none;
                     background-color: transparent;
                     border-bottom:  1px solid #fff;
-                    color:#fff
+                    color:#fff;
                 }
             }
         }
         & .document{
             background-color: #fff;
+            color: #585858;
+            padding: 10px;
         }
     }
 }
@@ -54,4 +56,21 @@ input:focus{
     right: 0;
     margin-right: 15px;
     font-weight: bold;
+    font-size: 2rem;
+}
+#container-img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 25%;
+    & img{
+        width: 100%;
+        height: 100%;
+    }
+}
+span{
+    border-bottom: 1px solid #e2dfdf;
+    width: 100%;
+    margin-left: 15px;
 }

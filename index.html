@@ -45,17 +45,25 @@
                 <br>
                 <label for="">FOTO DE PERFIL:</label>
                 <br>
-                <input type="file" name="imagen">
+                <input type="file" name="imagen" id="imagenUsuario">
                 <br>
                 <label for="">DESCRIBE TU TRABAJO:</label>
                 <br>
                 <input type="text" maxlength="80" id="descripcion">
                 <br>
-                <button class="envio" type="submit">CONVERTIR</button>
+                <button class="envio" type="submit" id="envioDatos">CONVERTIR</button>
             </form>
         </article>
         <article class="document">
-
+            <div id="container-img">
+            </div>
+            <h3>NOMBRE: <span id="sectionNombre"></span></h3>
+            <h3>APELLIDO: <span id="sectionApellido"></span></h3>
+            <h3>CORREO: <span id="sectionCorreo"></span></h3>
+            <h3>TELEFONO: <span id="sectionTelefono"></span></h3>
+            <h3>DIRECCION: <span id="sectionDireccion"></span></h3>
+            <h3>DESCRIPCION:</h3>
+            <p id="sectionDescripcion"></p>
         </article>
     </section>
     <script src="app.js"></script>
